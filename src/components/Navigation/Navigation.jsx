@@ -13,7 +13,9 @@ export default function Navigation() {
             <img className={css.logo} src={logo} alt="cube" />
         <nav className={css.navbar}>
             <NavLink to="/" className={getNavLinkClass}>Головна</NavLink>
-            <NavLink to="/movies" className={getNavLinkClass}>Теорія</NavLink>
+            <NavLink to="/info" className={getNavLinkClass}>Інфо по кх</NavLink>
+            <NavLink to="/block" className={getNavLinkClass}>Блокбілдінг</NavLink>
+            <NavLink to="/domino" className={getNavLinkClass}>Доміно</NavLink>
         </nav>
         </div>
     )

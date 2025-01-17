@@ -1,15 +1,14 @@
 .heading {
-    font-size: 32px;
     margin: 0px 0px 24px 0px;
     line-height: 1;
     color: rgba(245, 245, 245, 0.851);
     font-family: "Raleway", serif;
-    font-size: 60px;
+    font-size: 58px;
     text-shadow: 2px 4px 4px rgba(223, 222, 222, 0.5);
 }
 
 .container {
-    padding: 0 120px;
+    padding: 0 80px 40px 80px;
     position: relative;
 }
 
@@ -23,8 +22,8 @@
 .imageSpace {
     width: 80px;
     position: absolute;
-    bottom: 60px;
-    left: 760px;
+    bottom: 110px;
+    left: 790px;
     rotate: -60deg;
 }
 
@@ -32,7 +31,7 @@
     width: 252px;
     position: absolute;
     top: 20px;
-    right: 120px;
+    right: 80px;
     border: 2px solid whitesmoke;
     border-radius: 8px;
 } 
@@ -46,7 +45,7 @@
     width: 200px;
     height: 200px;
     position: absolute;
-    right: 460px;
+    right: 420px;
     top: 110px;
 }
 

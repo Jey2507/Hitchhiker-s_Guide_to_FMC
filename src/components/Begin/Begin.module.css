@@ -1,0 +1,19 @@
+.beginBox {
+    background-color: #b4d3e0;
+    width: 755.2px;
+    border-radius: 12px;
+    padding: 12px 16px;
+    margin: 24px 0px;
+}
+
+.beginBox h4 {
+    margin: 8px 0px 0px 0px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.beginBox p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.25;
+}
