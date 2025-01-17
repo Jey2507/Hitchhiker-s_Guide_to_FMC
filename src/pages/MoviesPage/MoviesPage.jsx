@@ -7,7 +7,7 @@ export default function MoviesPage() {
         <div>
 
           <div className={css.container}>
-            <h2 className={css.heading}></h2>
+            <h2 className={css.heading}>Сторінка ще не готова, альо...</h2>
           </div>
             
 
