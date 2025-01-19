@@ -3,7 +3,7 @@ body {
     background-color: #211F27;
     background-image: url(../src/assets/images/stars.jpg);
     background-repeat: no-repeat;
-    background-size: 110%;
+    background-size: cover;
     background-position: left;
     font-family: "Raleway", serif;
 }

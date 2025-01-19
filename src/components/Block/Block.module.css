@@ -1,0 +1,171 @@
+.guideSection {
+    padding: 12px 24px 36px 24px;
+    border-radius: 8px;
+    background-color: #e0c3ffeb;
+  }
+  
+  .sectionTitle {
+    font-size: 28px;
+    color: #072235;
+    margin-top: 8px;
+    font-weight: 800;
+    margin-bottom: 12px;
+  }
+  
+  .sectionDescription {
+    font-size: 22px;
+    line-height: 1.25;
+    font-weight: 500;
+    margin-bottom: 10px;
+    margin-top: 0;
+    color: rgb(0, 0, 0);
+  }
+  
+  .resourcesList {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 12px;    
+  }
+
+  .itemVideo {
+    width: 480px;
+  }
+
+  .itemLink {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 180px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+.linkTime {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid red;
+    border-radius: 12px;
+}
+  
+.linkBook {
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid blue;
+    border-radius: 12px;
+}
+
+.resourcesList li {
+    margin-bottom: 5px;
+    max-width: 480px;
+  }
+  
+  .resourcesList a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
+
+  .textList {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 12px 0;
+    color: #000000;
+  }
+
+  .list {
+    margin-bottom: 32px;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .list li {
+    width: max-content;
+    padding: 0px 8px;
+    border-bottom-left-radius: 12px;
+  }
+
+  .list li:nth-child(1) {
+    border-bottom: 4px solid purple;
+    border-left: 4px solid purple;
+  }
+
+  .list li:nth-child(2) {
+    border-bottom: 4px solid #007bff;
+    border-left: 4px solid #007bff;
+  }
+
+  .list li:nth-child(3) {
+    border-bottom: 4px solid #ffe222;
+    border-left: 4px solid #ffe222;
+  }
+
+  .list li:nth-child(4) {
+    border-bottom: 4px solid orange;
+    border-left: 4px solid orange;
+  }
+
+  .list p {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+  }
+  
+.image {
+    width: 150px;
+}
+
+/* Стилі для 3D-кнопок */
+.linkButton {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    cursor: pointer;
+}
+
+.buttonPrimary {
+    padding-bottom: 0;
+    background-color: #007bff; /* Яскравий синій */
+    color: #ffffff;
+    border: 2px solid #0056b3; /* Темніший відтінок синього */
+    box-shadow: 0 12px 0 #0056b3, 0 16px 30px rgba(0, 0, 0, 0.2);
+}
+
+.buttonPrimary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 0 #0056b3, 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.buttonPrimary:active {
+    transform: translateY(2px);
+    box-shadow: 0 4px 0 #0056b3, 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.buttonSecondary {
+    background-color: #ffe222; /* Яскравий помаранчевий */
+    color: #ffffff;
+    border: 2px solid #e6ce19; /* Темніший відтінок помаранчевого */
+    box-shadow: 0 12px 0 #e6ce19, 0 16px 30px rgba(0, 0, 0, 0.2);
+}
+
+.buttonSecondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 0 #e6ce19, 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.buttonSecondary:active {
+    transform: translateY(2px);
+    box-shadow: 0 4px 0 #e6ce19, 0 6px 12px rgba(0, 0, 0, 0.2);
+}
