@@ -3,7 +3,7 @@ import telegram from "../../assets/images/telegram.png";
 import discord from "../../assets/images/discord.png";
 import facebook from "../../assets/images/facebook.png";
 import Swiper from "../../components/Swiper/Swiper.jsx";
-// import Begin from '../../components/Begin/Begin.jsx';
+import Begin from '../../components/Begin/Begin.jsx';
 
 export default function TeoriPage() {
     return (
@@ -33,8 +33,8 @@ export default function TeoriPage() {
                   </li>
                 </ul>
             </div>
+            <Begin />
             <Swiper />
-            {/* <Begin /> */}
           </div>
         </div>
     );

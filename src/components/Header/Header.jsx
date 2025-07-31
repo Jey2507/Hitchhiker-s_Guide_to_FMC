@@ -22,16 +22,16 @@ export default function Header() {
 
       <nav className={clsx(css.nav, { [css.open]: isMenuOpen })}>
         <NavLink to="/" onClick={closeMenu} className={getLinkClass}>
-          Home
+          Путівник
         </NavLink>
         <NavLink to="/info" onClick={closeMenu} className={getLinkClass}>
-          Info
-        </NavLink>
-        <NavLink to="/block" onClick={closeMenu} className={getLinkClass}>
-          Block
+          Інфа по кх
         </NavLink>
         <NavLink to="/domino" onClick={closeMenu} className={getLinkClass}>
-          Domino
+          Блокбілдінг
+        </NavLink>
+        <NavLink to="/domino" onClick={closeMenu} className={getLinkClass}>
+          Доміно
         </NavLink>
       </nav>
     </header>
