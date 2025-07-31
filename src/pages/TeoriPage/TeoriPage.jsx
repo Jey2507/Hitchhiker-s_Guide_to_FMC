@@ -3,12 +3,11 @@ import telegram from "../../assets/images/telegram.png";
 import discord from "../../assets/images/discord.png";
 import facebook from "../../assets/images/facebook.png";
 import Swiper from "../../components/Swiper/Swiper.jsx";
-import Begin from '../../components/Begin/Begin.jsx';
+// import Begin from '../../components/Begin/Begin.jsx';
 
 export default function TeoriPage() {
     return (
         <div>
-            
           <div className={css.container}>
           <h2 className={css.heading}>Інфа по кх</h2>
             <div className={css.socialBox}>
@@ -35,7 +34,7 @@ export default function TeoriPage() {
                 </ul>
             </div>
             <Swiper />
-            <Begin />
+            {/* <Begin /> */}
           </div>
         </div>
     );

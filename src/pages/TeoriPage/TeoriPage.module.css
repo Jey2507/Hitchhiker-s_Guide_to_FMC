@@ -1,14 +1,20 @@
 .heading {
-    font-size: 52px;
     margin: 0px 0px 24px 0px;
     line-height: 1;
     color: rgba(245, 245, 245, 0.851);
     font-family: "Raleway", serif;
+    font-size: 28px;
+    font-weight: 800;
+    padding-left: 12px;
+    height: 56px;
+    display: flex;
+    align-items: center;
     text-shadow: 2px 4px 4px rgba(223, 222, 222, 0.5);
+    background: linear-gradient(to right, transparent, transparent, yellow);
 }
 
 .container {
-    padding: 0 80px;
+    padding: 20px 20px 200px 20px;
     position: relative;
 }
 
@@ -16,14 +22,14 @@
     color: rgba(245, 245, 245, 0.926);
     font-size: 20px;
     margin: 0;
-    width: 720px;
+    width: 100%;
     margin-bottom: 16px;
 }
 
 .socialBox {
-    width: max-content;
+    width: 100%;
     border: 2px dashed whitesmoke;
-    padding: 12px 16px;
+    padding: 12px 16px 16px 16px;
     border-radius: 10px;
 
 }
@@ -34,15 +40,17 @@
 }
 
 .list {
-    width: 720px;
+    width: 100%;
     display: flex;
+    gap: 12px;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
 }
 
 .link {
     padding: 4px 8px;
     border-radius: 8px;
+    
 }
 
 .link a {

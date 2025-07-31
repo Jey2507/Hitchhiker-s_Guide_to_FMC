@@ -47,7 +47,7 @@ export default function ImageSwiper() {
                 </div>
             </div>
         </div>
-        <a className={css.seven} href="https://www.worldcubeassociation.org/results/rankings/333fm/single?region=Ukraine"><img className={css.sevenImage} src={seven} alt="up" /></a>
+        {/* <a className={css.seven} href="https://www.worldcubeassociation.org/results/rankings/333fm/single?region=Ukraine"><img className={css.sevenImage} src={seven} alt="up" /></a> */}
         </>
     );
 }

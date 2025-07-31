@@ -1,13 +1,13 @@
 import { Suspense } from "react";
 
 import Loader from "../Loader/Loader";
-import Navigation from "../Navigation/Navigation";
 import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
 
 export default function Layout({ children }) {
   return (
     <div>
-      <Navigation />
+      <Header />
       <Suspense fallback={<Loader />}>
         {children}
       </Suspense>
