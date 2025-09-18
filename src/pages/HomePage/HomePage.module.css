@@ -118,14 +118,6 @@
   margin: 0;
 }
 
-.guideIntro:nth-child(1) {
-    margin: 20px 0px;
-}
-
-.guideIntro:nth-child(2) {
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
 
 .guideIntroOther {
   margin: 0;
