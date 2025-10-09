@@ -9,8 +9,7 @@ export default function TeoriPage() {
     return (
         <div>
           <div className={css.container}>
-          <h2 className={css.heading}>Інфа по кх</h2>
-            <div className={css.socialBox}>
+            <div>
               <h3 className={css.title}>Одразу зазначу корисні групи, де можна отримати відповіді на питання:</h3>
                 <ul className={css.list}>
                   <li className={css.link}>

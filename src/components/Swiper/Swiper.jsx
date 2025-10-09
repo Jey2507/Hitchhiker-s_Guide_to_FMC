@@ -10,8 +10,8 @@ import third from "../../assets/images/photo_pb.jpg";
 import four from "../../assets/images/photo_table.jpg";
 import five from "../../assets/images/solve.jpg";
 import six from "../../assets/images/mem.jpg"
-import seven from "../../assets/images/exp.jpg"
 import clsx from "clsx";
+import { NavLink } from "react-router-dom";
 
 export default function ImageSwiper() {
     const swiperContainerRef = useRef(null);
@@ -47,7 +47,10 @@ export default function ImageSwiper() {
                 </div>
             </div>
         </div>
-        <a className={css.seven} href="https://www.worldcubeassociation.org/results/rankings/333fm/single?region=Ukraine"><img className={css.sevenImage} src={seven} alt="up" /></a>
+        <div className={css.groupButton}>
+            <NavLink to="/" className={css.buttonPre}>pre</NavLink>
+            <NavLink to="/block" className={css.buttonNext}>next</NavLink>
+        </div>
         </>
     );
 }

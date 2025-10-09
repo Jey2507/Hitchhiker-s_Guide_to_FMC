@@ -1,20 +1,6 @@
-.heading {
-  margin: 0px 0px 24px 0px;
-  line-height: 1;
-  color: rgba(245, 245, 245, 0.851);
-  font-family: "Raleway", serif;
-  font-size: 28px;
-  font-weight: 800;
-  padding-left: 12px;
-  height: 56px;
-  text-shadow: 2px 4px 4px rgba(223, 222, 222, 0.5);
-  background: linear-gradient(to right, transparent, transparent, blue);
-}
-
 .container {
-  padding: 20px 20px 240px 20px;
+  padding: 20px 20px 180px 20px;
   position: relative;
-  background: radial-gradient(circle at 20% 20%, #0f2027, #1b2735 40%, #000000 100%);
   background-attachment: fixed;
   background-size: cover;
 }
@@ -53,20 +39,19 @@
 
 /* ===== Кубик Рубіка з анімацією ===== */
 .imageCubeWrapper {
-  width: 160px;
-  height: 160px;
+  width: 120px;
+  height: 120px;
   position: absolute;
-  left: 50%;
-  bottom: 40px;
-  transform: translateX(-50%);
+  left: 10%;
+  bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .imageCube {
-  width: 160px;
-  height: 160px;
+  width: 120px;
+  height: 120px;
   animation: float 3s ease-in-out infinite;
   filter: drop-shadow(0 0 12px rgba(0, 200, 255, 0.6));
 }
@@ -102,16 +87,14 @@
 }
 
 .guideContainer p {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.44);
   backdrop-filter: blur(6px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(129, 129, 129, 0.458);
   border-radius: 12px;
   padding: 14px 18px;
   font-size: 20px;
   line-height: 1.4;
-  color: #f5f5f5;
-  position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #2b2b2b;
 }
 
 .guideIntro {
@@ -139,4 +122,21 @@
 
 .spanTwo {
   border-bottom: 2px solid rgb(135, 206, 250);
+}
+
+.buttonNext {
+  width: 180px;
+  position: absolute;
+  right: 20px;
+  bottom: 40px;
+  background: rgba(255, 255, 255, 0.44);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(129, 129, 129, 0.458);
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-size: 20px;
+  line-height: 1.4;
+  color: #2b2b2b;
+  text-decoration: none;
+  text-align: center;
 }
