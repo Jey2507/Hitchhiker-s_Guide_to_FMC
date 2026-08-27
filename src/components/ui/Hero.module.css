@@ -123,6 +123,57 @@
   --rot: 18deg;
 }
 
+.author {
+  position: absolute;
+  top: 12rem;
+  right: 28%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.9em;
+  text-decoration: none;
+  opacity: 0.75;
+  animation: floatGentle 8s ease-in-out infinite;
+  transition: opacity 0.15s ease;
+}
+
+.author:hover {
+  opacity: 1;
+}
+
+.authorPhoto {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(86, 224, 201, 0.4);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+}
+
+.authorName {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.02em;
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+@media (max-width: 1150px) {
+  .author {
+    top: 13rem;
+    right: 2%;
+  }
+}
+
 @media (max-width: 960px) {
   /* Below this breakpoint the sidebar is a fixed overlay (see AppShell),
      so it no longer eats width from .main — the --content-shift-based
@@ -133,7 +184,8 @@
     margin: -2.2rem -1.25rem 1rem;
   }
   .planets,
-  .spaceship {
+  .spaceship,
+  .author {
     display: none;
   }
 }
