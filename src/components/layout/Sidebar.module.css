@@ -143,3 +143,11 @@
   color: var(--text-dim);
   opacity: 1;
 }
+
+/* On mobile the sidebar becomes the burger-menu drawer, and the topbar
+   above it already shows the logo + site name — drop the duplicate here. */
+@media (max-width: 960px) {
+  .brand {
+    display: none;
+  }
+}
