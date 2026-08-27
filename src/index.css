@@ -171,3 +171,7 @@ button {
     transition-duration: 0.001ms !important;
   }
 }
+
+button, a, li, ul, div, img {
+  -webkit-tap-highlight-color: transparent;
+}

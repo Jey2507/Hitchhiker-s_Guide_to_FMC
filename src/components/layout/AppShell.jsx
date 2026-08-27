@@ -19,6 +19,16 @@ export function AppShell() {
     setMenuOpen(false);
   }, [pathname]);
 
+  // Lock page scroll while the mobile drawer is open.
+  useEffect(() => {
+    if (!menuOpen) return undefined;
+    const { overflow } = document.body.style;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = overflow;
+    };
+  }, [menuOpen]);
+
   return (
     <div className={styles.shell}>
       <Topbar onMenuToggle={() => setMenuOpen((v) => !v)} menuOpen={menuOpen} />
