@@ -1,0 +1,139 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 4.2rem 2.2rem 3.6rem;
+  /* Break out of .content's shifted/centered box to span the full width of
+     .main (edge to edge next to the sidebar), not just .content's own
+     narrower column. margin-top cancels .content's top padding, same as
+     before; left/right undo --content-shift and reach past .content's own
+     right margin. */
+  margin-top: -3.5rem;
+  margin-bottom: 1rem;
+  margin-left: calc(-1 * var(--content-shift));
+  margin-right: calc(var(--content-shift) + var(--content-w) + var(--sidebar-w) - 100vw);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  background-size: cover;
+  background-position: center;
+  isolation: isolate;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(60rem 30rem at 20% -10%, rgba(139, 124, 246, 0.28), transparent 60%),
+    linear-gradient(180deg, rgba(6, 7, 15, 0.55) 0%, rgba(6, 7, 15, 0.88) 75%, var(--bg) 100%);
+}
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: var(--accent-2);
+  padding: 0.35em 0.8em;
+  border-radius: 999px;
+  background: rgba(86, 224, 201, 0.1);
+  border: 1px solid rgba(86, 224, 201, 0.3);
+  margin-bottom: 1.1em;
+}
+
+.title {
+  font-size: clamp(2.1rem, 1.5rem + 2.6vw, 3.4rem);
+  max-width: 20ch;
+  margin: 0 0 0.5em;
+}
+
+.lede {
+  max-width: 38rem;
+  font-size: 1.06rem;
+  color: var(--text-dim);
+  margin: 0 0 1.8em;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8em;
+}
+
+.primary,
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 0.8em 1.4em;
+  border-radius: 999px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #06070f;
+}
+
+.primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 26px rgba(var(--accent-rgb), 0.35);
+}
+
+.secondary {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.planets {
+  position: absolute;
+  top: -10px;
+  right: 6%;
+  width: 92px;
+  opacity: 0.9;
+  animation: float 7s ease-in-out infinite;
+}
+
+.spaceship {
+  position: absolute;
+  bottom: 6%;
+  right: 20%;
+  width: 68px;
+  opacity: 0.85;
+  transform: rotate(18deg);
+  animation: float 6s ease-in-out infinite 0.6s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(var(--rot, 0deg));
+  }
+  50% {
+    transform: translateY(-14px) rotate(var(--rot, 0deg));
+  }
+}
+
+.spaceship {
+  --rot: 18deg;
+}
+
+@media (max-width: 960px) {
+  /* Below this breakpoint the sidebar is a fixed overlay (see AppShell),
+     so it no longer eats width from .main — the --content-shift-based
+     breakout above no longer applies and .content is simply centered, so
+     just cancel .content's own padding like before. */
+  .hero {
+    padding: 3.2rem 1.25rem 2.6rem;
+    margin: -2.2rem -1.25rem 1rem;
+  }
+  .planets,
+  .spaceship {
+    display: none;
+  }
+}

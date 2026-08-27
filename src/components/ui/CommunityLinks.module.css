@@ -1,0 +1,59 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.9em;
+  margin-top: 1.4em;
+}
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85em;
+  padding: 1.1em 1.2em;
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(var(--accent-rgb), 0.35);
+  background: var(--surface-hover);
+}
+
+.iconChip {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+
+.icon {
+  width: 17px;
+  height: 17px;
+  color: #fff;
+}
+
+.platform {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.label {
+  margin: 0.15em 0 0.3em;
+  font-size: 1rem;
+}
+
+.desc {
+  margin: 0;
+  font-size: 0.84rem;
+  color: var(--text-dim);
+}

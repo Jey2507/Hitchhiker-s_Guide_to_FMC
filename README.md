@@ -1,11 +1,19 @@
-# React + Vite
+# Путівник по FMC для космотуристів
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Туторіал зі збірки кубика Рубіка на кількість ходів (FMC / Fewest Moves
+Challenge) українською: блокбілдинг, EO, NISS, Domino Reduction, HTR,
+вставки слайсу та бонусні просунуті теми (JEO, JZP, ARM).
 
-Currently, two official plugins are available:
+Побудовано на React + Vite, з даними гайду, винесеними в окремі content-файли
+(`src/content/`), і набором маленьких переюзабельних UI-компонентів
+(`src/components/ui/`) для рендеру блоків тексту, ресурсів, таблиць
+комутаторів тощо. Детальніше — у [CLAUDE.md](./CLAUDE.md).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Розробка
 
-
-Development in progress..
+```bash
+npm install
+npm run dev       # локальний сервер розробки
+npm run build     # продакшн-збірка в dist/
+npm run lint      # eslint
+```

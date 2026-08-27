@@ -1,13 +1,173 @@
+/* ==========================================================================
+   Design tokens
+   ========================================================================== */
+:root {
+  /* surfaces */
+  --bg: #06070f;
+  --bg-soft: #0a0c1a;
+  --surface: rgba(255, 255, 255, 0.045);
+  --surface-hover: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.09);
+  --border-soft: rgba(255, 255, 255, 0.06);
+
+  /* text */
+  --text: #eceefb;
+  --text-dim: #a6a9c8;
+  --text-faint: #6d7093;
+
+  /* accents */
+  --accent: #8b7cf6;
+  --accent-2: #56e0c9;
+  --accent-warm: #f7a45e;
+  --accent-rose: #f16e93;
+
+  --accent-rgb: 139, 124, 246;
+  --accent-2-rgb: 86, 224, 201;
+
+  /* rubik's cube face colors, used sparingly as tags/badges */
+  --cube-white: #f3f4f8;
+  --cube-yellow: #ffd23f;
+  --cube-red: #ef4444;
+  --cube-orange: #ff8a3d;
+  --cube-blue: #4d7cf0;
+  --cube-green: #3fbf6f;
+
+  /* type */
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "Space Mono", "SFMono-Regular", Consolas, monospace;
+
+  /* layout */
+  --sidebar-w: 272px;
+  --content-w: 46rem;
+  --topbar-h: 64px;
+
+  /* How far .content sits from .main's left edge when centered against the
+     full screen (not just the space left over after the sidebar). Reused by
+     Hero/Footer to break out to full .main width regardless of clamping —
+     see AppShell.module.css. */
+  --content-shift: max(1.75rem, calc((100vw - var(--content-w)) / 2 - var(--sidebar-w)));
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+
+  --shadow-soft: 0 12px 40px rgba(0, 0, 0, 0.45);
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    margin: 0;
-    background-color: #eeeeee;
-    font-family: "Raleway", serif;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+body::before {
+  /* fixed starfield wash behind the whole app */
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(60rem 40rem at 85% -10%, rgba(139, 124, 246, 0.16), transparent 60%),
+    radial-gradient(50rem 34rem at -10% 20%, rgba(86, 224, 201, 0.10), transparent 55%),
+    var(--bg);
 }
 
-/* #727073 */
+#root {
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.22;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  margin: 0 0 0.6em;
+}
+
+p {
+  margin: 0 0 1.1em;
+  color: var(--text-dim);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  padding-left: 1.3em;
+  color: var(--text-dim);
+}
+
+li + li {
+  margin-top: 0.4em;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+code {
+  font-family: var(--font-mono);
+}
+
+button {
+  font-family: inherit;
+}
+
+::selection {
+  background: rgba(var(--accent-rgb), 0.35);
+  color: #fff;
+}
+
+/* thin, unobtrusive scrollbars */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.18) transparent;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

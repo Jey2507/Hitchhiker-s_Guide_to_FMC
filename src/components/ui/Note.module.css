@@ -1,0 +1,48 @@
+.note {
+  position: relative;
+  margin: 1.6em 0;
+  padding: 1.1em 1.3em 1.1em 1.5em;
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-left: 3px solid var(--accent);
+}
+
+.note.tip {
+  border-left-color: var(--accent-2);
+}
+
+.note.guide {
+  border-left-color: var(--accent-warm);
+  background: linear-gradient(135deg, rgba(247, 164, 94, 0.08), var(--surface));
+}
+
+.note.warn {
+  border-left-color: var(--accent-rose);
+}
+
+.tag {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.5em;
+}
+
+.tip .tag {
+  color: var(--accent-2);
+}
+.guide .tag {
+  color: var(--accent-warm);
+}
+.warn .tag {
+  color: var(--accent-rose);
+}
+
+.text {
+  margin: 0;
+  color: var(--text-dim);
+}

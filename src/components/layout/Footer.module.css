@@ -1,0 +1,67 @@
+.footer {
+  margin-top: 4rem;
+  /* Break out of .content's shifted/centered box to span the full width of
+     .main, same trick as Hero — see Hero.module.css for the formula. Own
+     horizontal padding replaces the inset .content's padding used to give. */
+  margin-left: calc(-1 * var(--content-shift));
+  margin-right: calc(var(--content-shift) + var(--content-w) + var(--sidebar-w) - 100vw);
+  padding: 2rem 1.75rem 3rem;
+  border-top: 1px solid var(--border-soft);
+}
+
+@media (max-width: 960px) {
+  /* Sidebar is a fixed overlay below this breakpoint — see Hero.module.css. */
+  .footer {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 2rem 1.25rem 3rem;
+  }
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5em;
+  flex-wrap: wrap;
+}
+
+.note {
+  margin: 0;
+  max-width: 32rem;
+  font-size: 0.88rem;
+  color: var(--text-faint);
+}
+
+.links {
+  display: flex;
+  gap: 0.6em;
+}
+
+.link {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  border: 1px solid var(--border-soft);
+  transition: filter 0.15s ease, transform 0.15s ease;
+}
+
+.link:hover {
+  filter: brightness(1.12);
+  transform: translateY(-1px);
+}
+
+.icon {
+  width: 19px;
+  height: 19px;
+  color: #fff;
+}
+
+.credit {
+  margin: 1.6em 0 0;
+  font-size: 0.76rem;
+  color: var(--text-faint);
+  opacity: 0.7;
+}
