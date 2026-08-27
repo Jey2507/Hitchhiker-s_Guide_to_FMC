@@ -70,7 +70,6 @@ export function SiteSearch({ onNavigate }) {
           <line x1="13.4" y1="13.4" x2="18" y2="18" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
         </svg>
         <span className={styles.triggerText}>Пошук по гайду</span>
-        <kbd className={styles.kbd}>Ctrl K</kbd>
       </button>
 
       {open &&
