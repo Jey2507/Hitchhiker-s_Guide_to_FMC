@@ -27,35 +27,65 @@ export const COMMUNITIES = [
   },
 ];
 
+// People behind the guide, shown in the footer with a link to their WCA
+// (World Cube Association) competitor profile.
+export const AUTHORS = [
+  {
+    name: "Юрій Рябов",
+    role: "текст гайду",
+    url: "https://www.worldcubeassociation.org/persons/2018RIAB01",
+  },
+  {
+    name: "Олег Топорович",
+    role: "розробка сайту",
+    url: "https://www.worldcubeassociation.org/persons/2018TOPO01",
+  },
+];
+
+// `icon` is the lookup key into CONTEST_ICONS (src/components/ui/ContestIcons.jsx).
+// `color` is the site's own brand/theme color where it has one (Facebook,
+// 333.fm), otherwise a color picked to sit well next to the rest.
 export const CONTESTS = [
   {
     label: "Facebook-група FMC",
     url: "https://www.facebook.com/groups/1422080808012720/?ref=share",
     note: "щотижневий контест",
+    icon: "facebook",
+    color: "#1877F2",
   },
   {
     label: "333.fm",
     url: "https://333.fm",
     note: "щотижневий контест і нескінченний челендж",
+    icon: "cube",
+    color: "#6366F1",
   },
   {
     label: "speedsolving.com",
     url: "https://www.speedsolving.com/",
     note: "щотижневий мін",
+    icon: "forum",
+    color: "#F59E0B",
   },
   {
     label: "cubers.io",
     url: "https://cubers.io",
     note: "щотижневий мін",
+    icon: "timer",
+    color: "#8B5CF6",
   },
   {
     label: "fewest-moves.info",
     url: "https://www.fewest-moves.info/",
     note: "щотижнева збірка і щомісячний мін",
+    icon: "list",
+    color: "#00ACC1",
   },
   {
     label: "sportcubing.in.ua",
     url: "https://sportcubing.in.ua/",
     note: "щотижнева збірка (Україна)",
+    icon: "trophy",
+    color: "#10B981",
   },
 ];

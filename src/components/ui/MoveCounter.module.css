@@ -1,0 +1,136 @@
+.wrap {
+  margin: 1.6em 0;
+}
+
+.input {
+  width: 100%;
+  padding: 1em 1.2em;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-soft);
+  background: var(--surface);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  resize: vertical;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.input::placeholder {
+  color: var(--text-faint);
+}
+
+.tokens {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35em;
+  margin-top: 1em;
+  padding: 1em 1.1em;
+  border-radius: var(--radius-md);
+  background: var(--bg-soft);
+  border: 1px solid var(--border-soft);
+}
+
+.token {
+  font-family: var(--font-mono);
+  font-size: 0.92rem;
+  padding: 0.1em 0.4em;
+  border-radius: 5px;
+  color: var(--text);
+}
+
+.tokenNiss {
+  background: rgba(var(--accent-2-rgb), 0.14);
+  color: var(--accent-2);
+}
+
+.tokenRotation {
+  color: var(--text-faint);
+  font-style: italic;
+}
+
+.tokenInvalid {
+  color: var(--accent-rose);
+  text-decoration: wavy underline;
+  text-decoration-color: var(--accent-rose);
+}
+
+.summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.4em 2em;
+  margin-top: 1.2em;
+  padding: 1em 1.2em;
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+}
+
+.total {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5em;
+}
+
+.totalNumber {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--accent);
+}
+
+.totalLabel {
+  color: var(--text-dim);
+  font-size: 0.88rem;
+}
+
+.breakdown {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4em 2em;
+  margin: 0;
+}
+
+.breakdown dt {
+  font-size: 0.74rem;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.breakdown dd {
+  margin: 0.15em 0 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.messages {
+  margin: 0.9em 0 0;
+  padding: 0.9em 1.1em 0.9em 1.4em;
+  border-radius: var(--radius-md);
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+.messages li + li {
+  margin-top: 0.35em;
+}
+
+.errors {
+  background: rgba(241, 110, 147, 0.08);
+  border: 1px solid rgba(241, 110, 147, 0.25);
+  color: var(--accent-rose);
+}
+
+.warnings {
+  background: rgba(247, 164, 94, 0.08);
+  border: 1px solid rgba(247, 164, 94, 0.25);
+  color: var(--accent-warm);
+}

@@ -1,7 +1,7 @@
 export const BLOCKBUILDING = [
   {
     id: "blockbuilding",
-    title: "Блокбілдинг",
+    title: "Blockbuilding",
     kicker: "Крок 1",
     blocks: [
       {

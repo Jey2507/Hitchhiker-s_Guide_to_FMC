@@ -8,7 +8,7 @@ export const ICEBERG = [
     title: "Поверхня",
     items: [
       { label: "CFOP", to: "/#cfop" },
-      { label: "Блокбілдинг", to: "/blockbuilding#blockbuilding" },
+      { label: "Blockbuilding", to: "/blockbuilding#blockbuilding" },
     ],
   },
   {

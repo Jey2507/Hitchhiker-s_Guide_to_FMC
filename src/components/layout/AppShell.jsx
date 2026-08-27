@@ -5,12 +5,14 @@ import { Sidebar } from "./Sidebar.jsx";
 import { Topbar } from "./Topbar.jsx";
 import { Footer } from "./Footer.jsx";
 import { useScrollToHash } from "../../hooks/useScrollToHash.js";
+import { useDocumentMeta } from "../../hooks/useDocumentMeta.js";
 import styles from "./AppShell.module.css";
 
 export function AppShell() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { pathname } = useLocation();
   useScrollToHash();
+  useDocumentMeta();
 
   // Close the mobile drawer whenever the route changes.
   useEffect(() => {

@@ -59,6 +59,53 @@
   color: #fff;
 }
 
+.authors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em 1.5em;
+  margin-top: 1.6em;
+  padding-top: 1.4em;
+  border-top: 1px solid var(--border-soft);
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+.author:hover {
+  opacity: 0.8;
+}
+
+.authorBadge {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+}
+
+.authorIcon {
+  width: 20px;
+  height: 20px;
+  color: #fff;
+}
+
+.authorName {
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+.authorRole {
+  font-size: 0.78rem;
+  color: var(--text-faint);
+}
+
 .credit {
   margin: 1.6em 0 0;
   font-size: 0.76rem;

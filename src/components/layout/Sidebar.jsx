@@ -2,13 +2,14 @@ import clsx from "clsx";
 import { Link, useLocation } from "react-router-dom";
 import { NAV } from "../../content/navigation.js";
 import { useActiveSection } from "../../hooks/useActiveSection.js";
+import { SiteSearch } from "../ui/SiteSearch.jsx";
 import rubikCube from "../../assets/images/rubik_cube.png";
 import styles from "./Sidebar.module.css";
 
 export function Sidebar({ onNavigate }) {
   const location = useLocation();
   const activePage = NAV.find((page) => page.path === location.pathname) ?? NAV[0];
-  const sectionIds = activePage.sections.map((s) => s.id);
+  const sectionIds = activePage.sections.flatMap((s) => [s.id, ...(s.children?.map((c) => c.id) ?? [])]);
   const activeSectionId = useActiveSection(sectionIds);
 
   return (
@@ -21,11 +22,18 @@ export function Sidebar({ onNavigate }) {
         </span>
       </Link>
 
+      <SiteSearch onNavigate={onNavigate} />
+
       <ul className={styles.pages}>
         {NAV.map((page) => {
           const isActivePage = page.path === activePage.path;
           return (
             <li key={page.path}>
+              {page.groupStart === "reference" && (
+                <div className={styles.groupDivider} role="separator">
+                  <span>Довідково</span>
+                </div>
+              )}
               <Link
                 to={page.path}
                 onClick={onNavigate}
@@ -47,6 +55,24 @@ export function Sidebar({ onNavigate }) {
                       >
                         {section.label}
                       </Link>
+                      {section.children && (
+                        <ul className={styles.subsections}>
+                          {section.children.map((child) => (
+                            <li key={child.id}>
+                              <Link
+                                to={`${page.path}#${child.id}`}
+                                onClick={onNavigate}
+                                className={clsx(
+                                  styles.subsectionLink,
+                                  activeSectionId === child.id && styles.sectionLinkActive
+                                )}
+                              >
+                                {child.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </li>
                   ))}
                 </ul>

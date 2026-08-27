@@ -66,6 +66,30 @@
   background: rgba(var(--accent-rgb), 0.14);
 }
 
+.groupDivider {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  margin: 0.9em 0.6em 0.5em;
+}
+
+.groupDivider::before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border-soft);
+}
+
+.groupDivider span {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  white-space: nowrap;
+}
+
 .sections {
   list-style: none;
   margin: 0.2em 0 0.6em;
@@ -93,4 +117,29 @@
   color: var(--accent-2);
   background: rgba(var(--accent-2-rgb), 0.1);
   font-weight: 600;
+}
+
+.subsections {
+  list-style: none;
+  margin: 0.1em 0 0.3em;
+  padding: 0 0 0 0.9em;
+  border-left: 1px dashed var(--border-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 0.05em;
+}
+
+.subsectionLink {
+  display: block;
+  padding: 0.35em 0.7em;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  color: var(--text-faint);
+  opacity: 0.85;
+  transition: background 0.15s ease, color 0.15s ease, opacity 0.15s ease;
+}
+
+.subsectionLink:hover {
+  color: var(--text-dim);
+  opacity: 1;
 }

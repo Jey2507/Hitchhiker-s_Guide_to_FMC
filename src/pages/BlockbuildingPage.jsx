@@ -7,7 +7,7 @@ export default function BlockbuildingPage() {
     <>
       <PageHeader
         eyebrow="Розділ 1"
-        title="Блокбілдинг"
+        title="Blockbuilding"
         tagline="Перше й найпростіше покращення над звичайним CFOP: блоки, орієнтація ребер, NISS і вставки кутиків. Реально зібрати саб30."
       />
       {BLOCKBUILDING.map((section) => (

@@ -25,6 +25,26 @@ export function FacebookIcon({ className }) {
   );
 }
 
+// Monogram badge used to link out to a WCA (World Cube Association)
+// competitor profile — see AUTHORS in communities.js.
+export function WcaIcon({ className }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" aria-hidden="true">
+      <text
+        x="12"
+        y="15.5"
+        textAnchor="middle"
+        fontSize="8.5"
+        fontWeight="700"
+        fontFamily="'Space Grotesk', Inter, sans-serif"
+        fill="currentColor"
+      >
+        WCA
+      </text>
+    </svg>
+  );
+}
+
 export const SOCIAL_ICONS = {
   Telegram: TelegramIcon,
   Discord: DiscordIcon,

@@ -4,6 +4,8 @@ import HomePage from "./pages/HomePage.jsx";
 import BlockbuildingPage from "./pages/BlockbuildingPage.jsx";
 import DominoPage from "./pages/DominoPage.jsx";
 import BonusPage from "./pages/BonusPage.jsx";
+import ToolsPage from "./pages/ToolsPage.jsx";
+import LibraryPage from "./pages/LibraryPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 
 export default function App() {
@@ -14,6 +16,8 @@ export default function App() {
         <Route path="/blockbuilding" element={<BlockbuildingPage />} />
         <Route path="/domino" element={<DominoPage />} />
         <Route path="/bonus" element={<BonusPage />} />
+        <Route path="/tools" element={<ToolsPage />} />
+        <Route path="/library" element={<LibraryPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>

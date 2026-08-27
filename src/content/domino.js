@@ -1,4 +1,5 @@
 import dr5MoveRzp from "../assets/images/content/dr-5move-rzp.png";
+import { GLOSSARY_TERMS } from "./glossary.js";
 
 export const DOMINO = [
   {
@@ -739,27 +740,7 @@ export const DOMINO = [
       },
       {
         t: "glossary",
-        items: [
-          {
-            term: "RZP",
-            def: "Крок між EO та DR, на якому куб спрощується до чогось на кшталт DR-4e4c. З польської: ruch(y) zupełnie przypadkowy — «повністю випадковий(і) рух(и)».",
-          },
-          { term: "DRM", def: "Інша назва RZP. Означає «DR minus», тобто «doing random moves»." },
-          {
-            term: "QT",
-            def: "Quarter turns — чверть-оберти (використовується в обговореннях кутових кейсів DR і HTR сабсетів). «4qt corners» означає, що кути потребують 4 чверть-оберти для збірки, не рахуючи подвійних рухів.",
-          },
-          {
-            term: "Double Slice Reduction",
-            def: "Залишити слайс DR і ще один слайс — зазвичай той, що може скоротитись з рухом на іншій стороні скрамблу за допомогою NISS.",
-          },
-          { term: "ABx", def: "«All But» — наприклад, AB3c означає «всі, крім 3 кутів»." },
-          {
-            term: "//x+y",
-            def: "У реконструкції зазвичай означає: x = довжина DR, y = кількість QT у рішенні кутів. Наприклад, «U F2 U R //9+3» — це 9-ходовий DR із 3qt кутами.",
-          },
-          { term: "4x", def: "Скелетон, який «не збігається» на 4 центри." },
-        ],
+        items: GLOSSARY_TERMS,
       },
     ],
   },
