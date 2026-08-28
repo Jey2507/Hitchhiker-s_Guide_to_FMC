@@ -30,18 +30,22 @@
 .menuButton {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
   gap: 5px;
   width: 40px;
   height: 40px;
+  padding: 0;
   border: none;
   background: transparent;
   cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .bar {
   display: block;
-  width: 100%;
+  width: 22px;
   height: 2px;
   flex-shrink: 0;
   border-radius: 2px;
